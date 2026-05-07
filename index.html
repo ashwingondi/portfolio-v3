@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashwin Kumar Gondi — Digital Transformation & Automation</title>
+  <meta name="description" content="Portfolio of Ashwin Kumar Gondi — MBA, NMIMS Mumbai | Digital Transformation Consultant | Ex-Bosch | Ex-Ericsson | Industry 4.0 & Automation Specialist" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.74/build/spline-viewer.js"></script>
+</head>
+<body>
+  <!-- ===== INSIGHT AURA (Radial Glow) ===== -->
+  <div class="insight-aura" id="insightAura"></div>
+
+  <!-- ===== RESUME FAB ===== -->
+  <a href="https://drive.google.com/file/d/1guP9fJnjlh08KH3bVoqEzGks95lleJYm/view" target="_blank" rel="noopener" class="resume-fab" id="resumeFab" title="View Resume">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"/>
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+    </svg>
+    <span>Resume</span>
+  </a>
+
+  <!-- ===== SCROLL PROGRESS BAR ===== -->
+  <div class="scroll-progress" id="scrollProgress">
+    <div class="scroll-progress-track">
+      <div class="scroll-progress-fill" id="scrollProgressFill"></div>
+      <div class="scroll-progress-indicator" id="scrollProgressIndicator">
+        <span class="scroll-percent" id="scrollPercent">0%</span>
+      </div>
+    </div>
+    <div class="scroll-progress-sections" id="scrollSections">
+      <div class="scroll-section-dot" data-section="hero" title="Home"></div>
+      <div class="scroll-section-dot" data-section="experience" title="Experience"></div>
+      <div class="scroll-section-dot" data-section="projects" title="Projects"></div>
+      <div class="scroll-section-dot" data-section="skills" title="Skills"></div>
+      <div class="scroll-section-dot" data-section="about" title="Know Me"></div>
+      <div class="scroll-section-dot" data-section="contact" title="Contact"></div>
+    </div>
+  </div>
+
+  <!-- ===== STICKY GLASSMORPHIC NAV ===== -->
+  <nav class="glass-nav" id="glassNav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" id="navLogo">
+        <span class="logo-letter-a">A</span><span class="logo-letter-g">G</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#hero" class="nav-link active" data-section="hero">Home</a>
+        <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+        <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+        <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+        <a href="#about" class="nav-link" data-section="about">Know Me</a>
+        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+        <div class="nav-active-indicator" id="navIndicator"></div>
+      </div>
+      <button class="nav-menu-btn" id="navMenuBtn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#hero" class="mobile-nav-link" data-section="hero">Home</a>
+      <a href="#experience" class="mobile-nav-link" data-section="experience">Experience</a>
+      <a href="#projects" class="mobile-nav-link" data-section="projects">Projects</a>
+      <a href="#skills" class="mobile-nav-link" data-section="skills">Skills</a>
+      <a href="#about" class="mobile-nav-link" data-section="about">Know Me</a>
+      <a href="#contact" class="mobile-nav-link" data-section="contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="main-content" id="mainContent">
+    <!-- ==========================================
+         SECTION 1: HERO IDENTITY
+         ========================================== -->
+    <section class="section hero-section hero-dark" id="hero">
+      <div class="spline-container" id="splineContainer">
+        <spline-viewer id="heroSpline" url="https://prod.spline.design/Bdd7G3nO7O7IDjo3/scene.splinecode"></spline-viewer>
+      </div>
+      <div class="hero-container">
+        <h1 class="hero-title animate-on-scroll" data-animation="chars">
+          Ashwin Kumar Gondi
+        </h1>
+        <p class="hero-subtitle animate-on-scroll" data-animation="typewriter">
+          MBA, NMIMS Mumbai | Ex-Bosch | Ex-Ericsson
+        </p>
+        <p class="hero-value-prop animate-on-scroll">
+          A <strong>Digital Transformation Consultant</strong> architecting operational excellence through <span class="highlight-text-hero">Automation</span> and <span class="highlight-text-hero">Industry 4.0 frameworks</span>
+        </p>
+        <div class="hero-cta-group animate-on-scroll">
+          <a href="#experience" class="cta-button primary" id="ctaExplore">
+            <span>Explore My Work</span>
+            <svg class="cta-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#contact" class="cta-button secondary hero-secondary" id="ctaContact">
+            <span>Get In Touch</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 2: PROFESSIONAL EXPERIENCE
+         ========================================== -->
+    <section class="section experience-section" id="experience">
+      <div class="section-container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-tag">Career Journey</span>
+          <h2 class="section-title">Professional Experience</h2>
+          <div class="section-divider"><span></span></div>
+        </div>
+
+        <div class="experience-timeline">
+          <!-- MODULE A: THRIDIFY -->
+          <div class="exp-card glass-card animate-on-scroll" data-animation="slide-up" id="expThridify">
+            <div class="exp-card-shimmer"></div>
+            <div class="timeline-connector">
+              <div class="timeline-dot pulse"></div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="exp-content">
+              <div class="exp-header">
+                <div class="exp-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"/></svg>
+                </div>
+                <div class="exp-title-group">
+                  <h3 class="exp-title">Thridify</h3>
+                  <span class="exp-role">Digital Strategy Consultant Intern</span>
+                </div>
+              </div>
+              <div class="exp-stats">
+                <div class="stat-item" data-target="8" data-suffix="+"><span class="stat-number">0</span><span class="stat-suffix">+</span><span class="stat-label">Templates Deployed</span></div>
+                <div class="stat-item" data-target="3"><span class="stat-number">0</span><span class="stat-suffix"></span><span class="stat-label">Agencies Engaged</span></div>
+              </div>
+              <div class="exp-brief">
+                <p>Solving vendor friction in adopting 3D visualization by architecting a scalable ecosystem for "plug-and-play" solutions.</p>
+              </div>
+              <button class="learn-more-btn" data-target="thridify-details" id="btnThridify">
+                <span>Learn More</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="learn-more-content" id="thridify-details">
+                <div class="detail-grid">
+                  <div class="detail-item">
+                    <span class="detail-label">The Problem</span>
+                    <p>Solving vendor friction in adopting 3D visualization by architecting a scalable ecosystem for "plug-and-play" solutions.</p>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">The Strategy</span>
+                    <p>Collaborated with co-founders to architect a <strong>3-tier partner framework</strong> and a scalable aggregator model intended to trigger "network effects" and optimize partner retention.</p>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">The Automation</span>
+                    <p>Implemented automated outreach systems using <strong>AppScript, Zeptomail, and Mailersend</strong>, deploying 8+ high-conversion templates that initiated partnership discussions with 3 agencies.</p>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">The Impact</span>
+                    <p>Designed the partner-onboarding UI flow and created the <strong>Furniture Services webpage on WordPress</strong>, directly improving time-on-site KPIs and strengthening engagement.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- MODULE B: BOSCH INDIA -->
+          <div class="exp-card glass-card animate-on-scroll" data-animation="slide-up" id="expBosch">
+            <div class="exp-card-shimmer"></div>
+            <div class="timeline-connector">
+              <div class="timeline-dot pulse"></div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="exp-content">
+              <div class="exp-header">
+                <div class="exp-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.049.58.025 1.193-.14 1.743"/></svg>
+                </div>
+                <div class="exp-title-group">
+                  <h3 class="exp-title">Bosch India</h3>
+                  <span class="exp-role">Business Excellence Intern</span>
+                </div>
+                <div class="exp-badges">
+                  <span class="exp-badge badge-indigo">Industry 4.0</span>
+                </div>
+              </div>
+              <div class="exp-stats">
+                <div class="stat-item" data-target="5000" data-suffix="+"><span class="stat-number">0</span><span class="stat-suffix">+</span><span class="stat-label">Data Records</span></div>
+                <div class="stat-item" data-target="30" data-suffix="%"><span class="stat-number">0</span><span class="stat-suffix">%</span><span class="stat-label">Downtime Reduction</span></div>
+              </div>
+              <div class="exp-brief">
+                <p>Conducted comprehensive process mapping of the spark plug manufacturing line, identifying 9+ critical inefficiencies and recommending Predictive Maintenance.</p>
+              </div>
+              <button class="learn-more-btn" data-target="bosch-details" id="btnBosch" data-docs='[{"url":"/documents/Final Report Bosch.pdf", "label":"View Final Report"}]'>
+                <span>Learn More</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="learn-more-content" id="bosch-details">
+                <div class="detail-grid">
+                  <div class="detail-item">
+                    <span class="detail-label">The Process</span>
+                    <p>Conducted comprehensive process mapping of the spark plug manufacturing line across ceramics, testing, and operations, identifying <strong>9+ critical inefficiencies</strong>.</p>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">The Solution</span>
+                    <p>Recommended <strong>Predictive Maintenance (PdM)</strong> and designed a 6-stage roadmap leveraging vibration analysis to detect <strong>5+ major fault types</strong>.</p>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">The Impact</span>
+                    <p>Delivered a proof-of-concept using an AI-generated dataset of <strong>5,000+ annotated records</strong>, projecting a <strong>30% reduction in unplanned downtime</strong> and <strong>25% savings in maintenance costs</strong>.</p>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">The Integration</span>
+                    <p>Linked plant-wide sensor data with the <strong>Nexeed platform</strong> and ERP systems for real-time, data-driven maintenance planning.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- MODULE C: ERICSSON -->
+          <div class="exp-card glass-card animate-on-scroll" data-animation="slide-up" id="expEricsson">
+            <div class="exp-card-shimmer"></div>
+            <div class="timeline-connector">
+              <div class="timeline-dot pulse"></div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="exp-content">
+              <div class="exp-header">
+                <div class="exp-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008zm-3 6h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008z"/></svg>
+                </div>
+                <div class="exp-title-group">
+                  <h3 class="exp-title">Ericsson</h3>
+                  <span class="exp-role">Domain Support Specialist</span>
+                </div>
+                <div class="exp-badges">
+                  <span class="exp-badge badge-gold">Gold Award</span>
+                  <span class="exp-badge badge-platinum">Platinum Award</span>
+                </div>
+              </div>
+              <div class="exp-stats">
+                <div class="stat-item" data-target="500" data-suffix="+"><span class="stat-number">0</span><span class="stat-suffix">+</span><span class="stat-label">Hours Saved</span></div>
+                <div class="stat-item" data-target="16" data-suffix="+"><span class="stat-number">0</span><span class="stat-suffix">+</span><span class="stat-label">Servers Managed</span></div>
+              </div>
+              <div class="exp-brief">
+                <p>Managed Level 2 (L2) operations for the Ericsson Multi Mediation (EMM) platform, supporting 16+ servers. Earned Gold & Platinum Awards.</p>
+              </div>
+              <button class="learn-more-btn" data-target="ericsson-details" id="btnEricsson">
+                <span>Learn More</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="learn-more-content" id="ericsson-details">
+                <div class="detail-grid">
+                  <div class="detail-item">
+                    <span class="detail-label">The Operations</span>
+                    <p>Managed Level 2 (L2) operations for the <strong>Ericsson Multi Mediation (EMM) platform</strong>, supporting <strong>16+ servers</strong> for the VEON Algeria project.</p>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">The Automation</span>
+                    <p>Developed two key automation initiatives: <strong>Daily Health Checks</strong> (saving 500+ hours annually) and <strong>CDR Dump Resubmission</strong> (saving 60–70 minutes per daily request).</p>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">The Recognition</span>
+                    <p>Earned the <strong>Gold Award</strong> for operational efficiency and the <strong>Platinum Award</strong> for client-focused automation.</p>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">Technical Stack</span>
+                    <p>Utilized <strong>Linux, SQL, Shell Scripting</strong>, and <strong>EMM</strong> for log analysis and incident resolution.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 3: PROJECTS & PUBLICATIONS
+         ========================================== -->
+    <section class="section projects-section" id="projects">
+      <div class="section-container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-tag">The Strategic Vault</span>
+          <h2 class="section-title">Projects & Publications</h2>
+          <div class="section-divider"><span></span></div>
+        </div>
+
+        <!-- BENTO GRID -->
+        <div class="bento-grid">
+          <!-- Project 1: Mall 2.0 (Primary Tile) -->
+          <div class="bento-card bento-primary glass-card animate-on-scroll" data-animation="scale-up" id="projectMall">
+            <div class="bento-card-shimmer"></div>
+            <div class="bento-image">
+              <img src="/images/mall.png" alt="Hybrid Retail & Micro-Fulfillment Model" loading="lazy" />
+              <div class="bento-image-overlay"></div>
+            </div>
+            <div class="bento-content">
+              <div class="bento-badge">National Finalists</div>
+              <h3 class="bento-title">Edgistify Innovation Challenge: "Mall 2.0"</h3>
+              <p class="bento-brief">Recognized as National Finalists for architecting a future-ready logistics framework addressing the "Operational Mismatch" in traditional retail.</p>
+              <button class="learn-more-btn" data-target="project1-details" id="btnMall" data-docs='[{"url":"/documents/Mall 2.0 ppt.pdf", "label":"View Presentation"}, {"url":"/documents/Edgestify challenge dashboard.html", "label":"View Dashboard"}]'>
+                <span>Learn More</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="learn-more-content" id="project1-details">
+                <div class="detail-grid">
+                  <div class="detail-item">
+                    <span class="detail-label">The Achievement</span>
+                    <p>Recognized as <strong>National Finalists</strong> for architecting a future-ready logistics framework.</p>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">The Challenge (Context)</span>
+                    <p>Addressing the "Operational Mismatch" where traditional malls face declining foot traffic while the Indian Quick Commerce sector grows at a <strong>142% CAGR</strong>. It solved the financial and inventory strain caused by excess stock and underutilized store assets.</p>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">The Solution (The "Mall 2.0" Model)</span>
+                    <p>Designed a <strong>Hybrid Retail + Micro-Fulfillment Model</strong> to strategically transform mall-based brand outlets into dynamic hubs. Facilitated <strong>1-2 hour deliveries</strong> for online orders directly from mall stores, leveraging existing inventory while preserving the in-store customer experience.</p>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">The Pilot Use Case</span>
+                    <p>Developed a feasibility study for <strong>H&M at Oberoi Mall, Mumbai</strong>, evaluating layout optimization and integrated inventory management.</p>
+                  </div>
+                  <div class="detail-item full-width">
+                    <span class="detail-label">Technical & Operational Implementation</span>
+                    <ul>
+                      <li><strong>17.5% Space Conversion:</strong> Architected a dedicated, customer-free <strong>MFC Dark Store</strong> within the existing store footprint (approx. 4,900 sq ft) for high-speed picking, packing, and dispatch.</li>
+                      <li><strong>3-Tier Inventory Pyramid:</strong> Classified inventory into <strong>Category A</strong> (Quick Commerce/Backroom), <strong>Category B</strong> (Dual Sales), and <strong>Category C</strong> (Experiential/Floor Only).</li>
+                      <li><strong>Advanced Tech Integration:</strong> Recommended <strong>AI-powered demand forecasting</strong> and a <strong>Unified Inventory Management System (IMS)</strong> with real-time stock sync, location-based tracking, and RFID/barcode integration.</li>
+                    </ul>
+                  </div>
+                  <div class="detail-item full-width">
+                    <span class="detail-label">Impact & Feasibility</span>
+                    <p>Identified Oberoi Mall as a strong pilot candidate with a <strong>Feasibility Score of 3.7/5.0</strong>, directly solving the store's "Low Trading Density" issue. Projected to turn underperforming retail space into a strategic asset, capturing market share in the fast-growing quick commerce fashion segment.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Iktara -->
+          <div class="bento-card glass-card animate-on-scroll" data-animation="scale-up" id="projectIktara">
+            <div class="bento-card-shimmer"></div>
+            <div class="bento-image">
+              <img src="/images/iktara.png" alt="AI Workflow Automation for Fashion Brand" loading="lazy" />
+              <div class="bento-image-overlay"></div>
+            </div>
+            <div class="bento-content">
+              <h3 class="bento-title">Business Process Transformation for Fashion Brand 'Iktara'</h3>
+              <p class="bento-brief">Co-managed a business process transformation project for a startup, Iktara, to eliminate operational bottlenecks caused by manual workflows.</p>
+              <button class="learn-more-btn" data-target="project2-details" id="btnIktara" data-docs='[{"url":"/documents/Group 1_Report.pdf", "label":"View Report"}]'>
+                <span>Learn More</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="learn-more-content" id="project2-details">
+                <div class="detail-grid">
+                  <div class="detail-item full-width">
+                    <span class="detail-label">The Goal</span>
+                    <p>Co-managed a business process transformation project for a startup, Iktara, to eliminate operational bottlenecks caused by manual workflows.</p>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">80% Reduction in Manual Work</span>
+                    <p>Built four interconnected workflows using <strong>n8n</strong> that automated order confirmations, self-service tracking, and inventory stockout alerts.</p>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">90% Reduction in Campaign Launch Time</span>
+                    <p>Architected a novel <strong>Agentic AI video workflow</strong> using OpenAI and Google Gemini Veo 3, automating the entire creative process from concept to final cinematic prompt.</p>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">Enhanced Customer Experience</span>
+                    <p>Implemented instant, manager-approved order confirmations and a 24/7 self-service tracking system, significantly improving brand trust and satisfaction.</p>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">Minimized Operational Risk</span>
+                    <p>Automated inventory alerts to prevent overselling and implemented validation checks that reduced human errors by more than <strong>90%</strong>.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Cult Fit -->
+          <div class="bento-card glass-card animate-on-scroll" data-animation="scale-up" id="projectCultfit">
+            <div class="bento-card-shimmer"></div>
+            <div class="bento-image">
+              <img src="/images/cultfit.png" alt="Product Feature Development for Fitness App" loading="lazy" />
+              <div class="bento-image-overlay"></div>
+            </div>
+            <div class="bento-content">
+              <h3 class="bento-title">Product Feature Development for Cult Fit</h3>
+              <p class="bento-brief">Led a product management initiative to identify and address key gaps in user engagement within the Cult Fit app.</p>
+              <button class="learn-more-btn" data-target="project3-details" id="btnCultfit" data-docs='[{"url":"/documents/Final project video.mp4", "label":"Watch Video"}]'>
+                <span>Learn More</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="learn-more-content" id="project3-details">
+                <div class="detail-grid">
+                  <div class="detail-item full-width">
+                    <span class="detail-label">The Strategy</span>
+                    <p>Led a product management initiative to identify and address key gaps in user engagement within the Cult Fit app. Proposed an MVP strategy centered on hyper-personalization and community features.</p>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">Data-Driven Prioritization</span>
+                    <p>Validated 8 feature ideas using the <strong>Kano model</strong> and user surveys to prioritize an MVP strategy focusing on user retention.</p>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">Designed "Delighter" Features</span>
+                    <p>Created a "Personalized Health-to-Plan Engine" for meal plans based on health data and budget, and a "Strength Tracker" featuring an interactive 3D muscle map.</p>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">Strategic Resource Optimization</span>
+                    <p>Made the critical decision to reject a "Recovery Readiness Score" after analysis showed it ranked low in user value but high in technical complexity.</p>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">Prototype & Communication</span>
+                    <p>Developed a front-end prototype to demonstrate the user journey and produced a high-energy cinematic ad creative to communicate the new value proposition.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Inflation Trends -->
+          <div class="bento-card glass-card animate-on-scroll" data-animation="scale-up" id="projectInflation">
+            <div class="bento-card-shimmer"></div>
+            <div class="bento-image">
+              <img src="/images/inflation.png" alt="India Inflation Data Visualization" loading="lazy" />
+              <div class="bento-image-overlay"></div>
+            </div>
+            <div class="bento-content">
+              <h3 class="bento-title">Data-Driven Analysis of Inflation Trends in India (2014-2024)</h3>
+              <p class="bento-brief">Analyzed a decade of inflation data in India to decode the interplay between macroeconomic policies, climate variability, and global events.</p>
+              <button class="learn-more-btn" data-target="project4-details" id="btnInflation" data-docs='[{"url":"/documents/TABLEAU Presentation .pdf", "label":"View Presentation"}, {"url":"/documents/Group 1.pdf", "label":"View Report"}]'>
+                <span>Learn More</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="learn-more-content" id="project4-details">
+                <div class="detail-grid">
+                  <div class="detail-item full-width">
+                    <span class="detail-label">The Objective</span>
+                    <p>Analyzed a decade of inflation data in India to decode the interplay between macroeconomic policies, climate variability, and global events.</p>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">Correlational Analysis</span>
+                    <p>Visualized 10 years of national inflation data, correlating fluctuations with major events like the 2014 oil price crash, 2016 demonetization, and the 2022 Russia-Ukraine war.</p>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">CPI Deconstruction</span>
+                    <p>Identified <strong>Food & Beverages (45.9% weightage)</strong> as the primary inflation driver and identified states like Maharashtra and Uttar Pradesh as the largest contributors to the national average.</p>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">Granular Climate Correlation</span>
+                    <p>Quantified how deficient rainfall in 2014 increased Maharashtra's food inflation to 6.5%, while better monsoons in 2016 reduced it to 5.4%.</p>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">Policy Recommendations</span>
+                    <p>Developed a set of strategic recommendations for policymakers focused on agricultural resilience, optimizing trade policies, and enhancing supply chain infrastructure.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: Industry 4.0 -->
+          <div class="bento-card glass-card animate-on-scroll" data-animation="scale-up" id="projectIndustry4">
+            <div class="bento-card-shimmer"></div>
+            <div class="bento-image">
+              <img src="/images/industry4.png" alt="Smart Manufacturing with IoT" loading="lazy" />
+              <div class="bento-image-overlay"></div>
+            </div>
+            <div class="bento-content">
+              <h3 class="bento-title">Industry 4.0: Carton Manufacturing Plant</h3>
+              <p class="bento-brief">Developed a strategic roadmap for implementing Industry 4.0 technologies in a Jalandhar-based manufacturing plant to diagnose critical operational inefficiencies.</p>
+              <button class="learn-more-btn" data-target="project5-details" id="btnIndustry4" data-docs='[{"url":"/documents/I4.0 Presentation.pdf", "label":"View Presentation"}, {"url":"/documents/Industry 4.0 Report.pdf", "label":"View Report"}]'>
+                <span>Learn More</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="learn-more-content" id="project5-details">
+                <div class="detail-grid">
+                  <div class="detail-item full-width">
+                    <span class="detail-label">The Diagnosis</span>
+                    <p>Developed a strategic roadmap for implementing Industry 4.0 technologies in a Jalandhar-based manufacturing plant to diagnose critical operational inefficiencies.</p>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">Loss Quantification</span>
+                    <p>Quantified annual operational losses at <strong>₹36.1 lakhs</strong> by conducting an in-depth analysis of machine failures and reactive maintenance costs.</p>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">Cost Reduction Projection</span>
+                    <p>Projected a <strong>67.33% reduction</strong> in annual maintenance-related costs by leveraging an MTTR & MTBF-based <strong>Preventive Maintenance strategy</strong>.</p>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">Targeted Tech Solutions</span>
+                    <p>Designed solutions for 6 core problem areas, including <strong>IoT sensors</strong> for real-time monitoring, automated control systems for boiler temperature, and an <strong>RFID-based</strong> warehouse management system.</p>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">Implementation & Ethics</span>
+                    <p>Created a detailed 4-phase implementation plan and an operator upskilling program to manage change and address job displacement ethical considerations.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PUBLICATIONS -->
+        <div class="publications-section animate-on-scroll">
+          <h3 class="subsection-title">
+            <span class="subsection-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+            </span>
+            Publications
+          </h3>
+          <div class="publications-grid">
+            <a href="https://ieeexplore.ieee.org/document/9614841" target="_blank" rel="noopener" class="publication-card glass-card" id="pub1">
+              <div class="pub-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+              </div>
+              <div class="pub-content">
+                <h4>High Directivity and High Gain Microstrip Patch Antenna for 5G Application with Defective and Suspended Ground Plane</h4>
+                <p class="pub-intro">A detailed study addressing antenna directivity optimization and enhanced radiation characteristics aiming to advance 5G network performance through structured ground plane innovations.</p>
+                <span class="pub-venue">IEMENTECH 2021 | IEEE Xplore</span>
+              </div>
+              <span class="pub-link-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </span>
+            </a>
+            <a href="https://ieeexplore.ieee.org/document/9726264/" target="_blank" rel="noopener" class="publication-card glass-card" id="pub2">
+              <div class="pub-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+              </div>
+              <div class="pub-content">
+                <h4>A Lens Shaped Slot and Parasitic Element Isolated MIMO Antenna for 5G Wireless Applications</h4>
+                <p class="pub-intro">Research focusing on novel isolation techniques for Multiple-Input Multiple-Output (MIMO) antennas, delivering improved signal clarity for next-generation wireless communications.</p>
+                <span class="pub-venue">INCAP 2021 | IEEE Xplore</span>
+              </div>
+              <span class="pub-link-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 4: CERTIFICATIONS & SKILLS
+         ========================================== -->
+    <section class="section skills-section" id="skills">
+      <div class="section-container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-tag">Capabilities</span>
+          <h2 class="section-title">Certifications & Skills</h2>
+          <div class="section-divider"><span></span></div>
+        </div>
+
+        <!-- CERTIFICATIONS -->
+        <div class="certs-container animate-on-scroll">
+          <h3 class="subsection-title">
+            <span class="subsection-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"/></svg>
+            </span>
+            Professional Certifications
+          </h3>
+          <div class="cert-grid">
+            <div class="cert-chip glass-card" data-cert="lss" id="certLSS">
+              <div class="cert-chip-shimmer"></div>
+              <div class="chip-top">
+                <span class="chip-label">Lean Six Sigma Green Belt</span>
+                <span class="chip-issuer"><span style="font-weight: 900; color: #00338D; font-size: 13px; letter-spacing: 1px;">KPMG</span></span>
+              </div>
+              <div class="cert-expanded">
+                <p>KPMG certified, specializing in <strong>DMAIC</strong> methodologies for process improvement.</p>
+              </div>
+            </div>
+            <div class="cert-chip glass-card" data-cert="gpm" id="certGPM">
+              <div class="cert-chip-shimmer"></div>
+              <div class="chip-top">
+                <span class="chip-label">Google Project Management</span>
+                <span class="chip-issuer"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="issuer-logo" style="height:20px; object-fit:contain;"></span>
+              </div>
+              <div class="cert-expanded">
+                <p>Professional certification covering <strong>Agile</strong>, Waterfall, and project lifecycle management.</p>
+              </div>
+            </div>
+            <div class="cert-chip glass-card" data-cert="gc" id="certGC">
+              <div class="cert-chip-shimmer"></div>
+              <div class="chip-top">
+                <span class="chip-label">Google Cloud</span>
+                <span class="chip-issuer"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="issuer-logo" style="height:20px; object-fit:contain;"></span>
+              </div>
+              <div class="cert-expanded">
+                <p>Expertise in cloud infrastructure and digital transformation at scale.</p>
+              </div>
+            </div>
+            <div class="cert-chip glass-card" data-cert="ibm-ai" id="certIBMAI">
+              <div class="cert-chip-shimmer"></div>
+              <div class="chip-top">
+                <span class="chip-label">IBM Generative AI Fundamentals</span>
+                <span class="chip-issuer"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" class="issuer-logo" style="height:14px; object-fit:contain; margin-top:2px;"></span>
+              </div>
+              <div class="cert-expanded">
+                <p>5-Course Specialization focused on the business application of GenAI.</p>
+              </div>
+            </div>
+            <div class="cert-chip glass-card" data-cert="ibm-pm" id="certIBMPM">
+              <div class="cert-chip-shimmer"></div>
+              <div class="chip-top">
+                <span class="chip-label">IBM Product Management</span>
+                <span class="chip-issuer"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" class="issuer-logo" style="height:14px; object-fit:contain; margin-top:2px;"></span>
+              </div>
+              <div class="cert-expanded">
+                <p>Focused on MVP strategy and user-centric design.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SKILLS -->
+        <div class="skills-zones animate-on-scroll">
+          <!-- Technical & Platform Stack -->
+          <div class="skill-zone" data-zone="technical">
+            <div class="zone-header">
+              <div class="zone-line"></div>
+              <h4 class="zone-title">Technical & Platform Stack</h4>
+              <div class="zone-line"></div>
+            </div>
+            <div class="skill-group">
+              <h5 class="skill-group-label">Programming & Data</h5>
+              <div class="skill-chips">
+                <div class="skill-chip glass-card"><span>Python</span></div>
+                <div class="skill-chip glass-card"><span>SQL</span></div>
+                <div class="skill-chip glass-card"><span>Tableau</span></div>
+                <div class="skill-chip glass-card"><span>Shell Scripting</span></div>
+              </div>
+            </div>
+            <div class="skill-group">
+              <h5 class="skill-group-label">Platforms</h5>
+              <div class="skill-chips">
+                <div class="skill-chip glass-card"><span>Linux</span></div>
+                <div class="skill-chip glass-card"><span>Jira</span></div>
+                <div class="skill-chip glass-card"><span>Figma</span></div>
+                <div class="skill-chip glass-card"><span>Wix</span></div>
+                <div class="skill-chip glass-card"><span>Google Ads</span></div>
+                <div class="skill-chip glass-card"><span>Microsoft Office Suite</span></div>
+              </div>
+            </div>
+            <div class="skill-group">
+              <h5 class="skill-group-label">Automation & Industry 4.0</h5>
+              <div class="skill-chips">
+                <div class="skill-chip glass-card"><span>n8n</span></div>
+                <div class="skill-chip glass-card"><span>IoT</span></div>
+                <div class="skill-chip glass-card"><span>Cloud</span></div>
+                <div class="skill-chip glass-card"><span>Nexeed Platform</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Strategic Skillset -->
+          <div class="skill-zone" data-zone="strategic">
+            <div class="zone-header">
+              <div class="zone-line"></div>
+              <h4 class="zone-title">Strategic Skillset</h4>
+              <div class="zone-line"></div>
+            </div>
+            <div class="skill-group">
+              <h5 class="skill-group-label">Problem Solving</h5>
+              <div class="skill-chips">
+                <div class="skill-chip glass-card"><span>MECE</span></div>
+                <div class="skill-chip glass-card"><span>Issue Trees</span></div>
+                <div class="skill-chip glass-card"><span>RCA</span></div>
+                <div class="skill-chip glass-card"><span>SCAMPER</span></div>
+              </div>
+            </div>
+            <div class="skill-group">
+              <h5 class="skill-group-label">Strategic Frameworks</h5>
+              <div class="skill-chips">
+                <div class="skill-chip glass-card"><span>Workflow Automation</span></div>
+                <div class="skill-chip glass-card"><span>Agile Methodologies</span></div>
+                <div class="skill-chip glass-card"><span>Trend Analysis</span></div>
+                <div class="skill-chip glass-card"><span>Kano Modeling</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 5: KNOW ME BETTER
+         ========================================== -->
+    <section class="section about-section" id="about">
+      <div class="section-container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-tag">Personal Pursuits</span>
+          <h2 class="section-title">Know Me Better</h2>
+          <div class="section-divider"><span></span></div>
+        </div>
+        
+        <p class="section-subtitle animate-on-scroll" style="margin-top: -20px; margin-bottom: 40px; text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">
+          I’ve always believed that the best digital strategies are informed by a life lived with intention outside the boardroom. These are the personal rituals and curiosities that keep my perspective sharp and my mindset flexible.
+        </p>
+
+        <div class="about-grid">
+          <!-- Traveling -->
+          <div class="about-card inline-glass-card animate-on-scroll">
+            <div class="about-card-img" style="margin: -32px -32px 24px -32px; height: 180px; overflow: hidden;">
+              <img src="/images/hobby_traveling.png" alt="Traveling" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <h3 class="about-card-title">Traveling</h3>
+            <p class="teaser-text"><strong>There is a specific kind of clarity that only comes when you are miles away from a paved road and hours into a steep climb.</strong></p>
+            <div class="extra-content">
+              <p>To me, travel is a deliberate act of stripping away the familiar to see what’s left. I find as much joy in the "ritual of research"—the meticulous mapping and the spreadsheets—as I do in the journey itself. I am entirely experience-driven, choosing the rugged authenticity of a remote trekking trail or a low-key homestay over luxury. I believe the most meaningful discoveries happen when you respect the local rhythm, embrace the silence of a long hike, and remain flexible enough to let the experience change you.</p>
+            </div>
+            <button class="view-more-btn">
+              <span class="btn-text">View More</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+          </div>
+
+          <!-- Photography -->
+          <div class="about-card inline-glass-card animate-on-scroll">
+            <div class="about-card-img" style="margin: -32px -32px 24px -32px; height: 180px; overflow: hidden;">
+              <img src="/images/hobby_photography.png" alt="Photography" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <h3 class="about-card-title">Photography</h3>
+            <p class="teaser-text"><strong>I’ve always felt that photography isn’t about what you see, but how you choose to look at it.</strong></p>
+            <div class="extra-content">
+              <p>It is my favorite way to reset my cognitive "refresh rate" by finding a narrative in the subtle details others might skip. Whether I am behind the lens or in the technical phase of post-processing, I am focused on capturing the atmosphere of a moment rather than just a static image. It is a constant exercise in patience—refining raw data into a story that holds the weight and emotion of the original experience.</p>
+              <p class="about-handle">Captured Perspectives / <a href="https://www.instagram.com/illusion_shots?igsh=MWxuaXptdzZwMDZncw==" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline;">@illusion_shots</a></p>
+            </div>
+            <button class="view-more-btn">
+              <span class="btn-text">View More</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+          </div>
+
+          <!-- Cooking -->
+          <div class="about-card inline-glass-card animate-on-scroll">
+            <div class="about-card-img" style="margin: -32px -32px 24px -32px; height: 180px; overflow: hidden;">
+              <img src="/images/hobby_cooking.png" alt="Cooking" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <h3 class="about-card-title">Cooking</h3>
+            <p class="teaser-text"><strong>I treat the kitchen as a creative laboratory where there are no "undo" buttons—only iterations.</strong></p>
+            <div class="extra-content">
+              <p>I love the challenge of researching a complex, unfamiliar dish and attempting to recreate it from scratch, blending traditional methods with my own experiments. It is a process of high-level planning met with the courage to be messy. Reaching that final result after hours of preparation is a constant reminder that the best innovations often come from staying curious, embracing trial and error, and trusting the process.</p>
+            </div>
+            <button class="view-more-btn">
+              <span class="btn-text">View More</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 6: CONTACT
+         ========================================== -->
+    <section class="section contact-section" id="contact">
+      <div class="contact-text-area">
+        <div class="section-header animate-on-scroll">
+          <span class="section-tag">Let's Connect</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <div class="section-divider"><span></span></div>
+        </div>
+        <div class="contact-content animate-on-scroll">
+          <p class="contact-intro">Interested in collaborating on digital transformation, automation, or Industry 4.0 initiatives? I'd love to hear from you.</p>
+          <p class="contact-interact-hint">
+            <span class="hint-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zM12 2.25V4.5m5.834.166l-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243l-1.59-1.59"/></svg>
+            </span>
+            Use the interactive keyboard below
+          </p>
+        </div>
+      </div>
+      <div class="contact-spline-area">
+        <spline-viewer url="https://prod.spline.design/SBf2SV-1-6nsugNy/scene.splinecode"></spline-viewer>
+      </div>
+      <footer class="site-footer animate-on-scroll">
+        <div class="footer-line"></div>
+        <p>&copy; 2025 Ashwin Kumar Gondi. All rights reserved.</p>
+        <p class="footer-tagline">Built with passion for <span class="highlight-text">digital transformation</span></p>
+      </footer>
+    </section>
+  </main>
+
+  <!-- ===== DETAIL MODAL ===== -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-card" id="modalCard">
+      <button class="modal-close" id="modalClose" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="modal-body" id="modalBody">
+        <!-- Dynamic content injected by JS -->
+      </div>
+      <div class="modal-footer" id="modalFooter">
+        <a href="#" class="modal-attachment" id="modalAttachment" target="_blank" rel="noopener" style="display:none;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18.375 12.739l-7.693 7.693a4.5 4.5 0 01-6.364-6.364l10.94-10.94A3 3 0 1119.5 7.372L8.552 18.32m.009-.01l-.01.01m5.699-9.941l-7.81 7.81a1.5 1.5 0 002.112 2.13"/></svg>
+          <span>View Attachments</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
