@@ -1016,7 +1016,7 @@ ul { list-style: none; }
   overflow-y: auto;
   border-radius: var(--radius-xl);
   /* Black frosted glass */
-  background: rgba(15, 23, 42, 0.82);
+  background: rgba(15, 23, 42, 0.98);
   backdrop-filter: blur(40px) saturate(1.6);
   -webkit-backdrop-filter: blur(40px) saturate(1.6);
   border: 1px solid rgba(255, 255, 255, 0.15);
