@@ -1793,6 +1793,10 @@ ul { list-style: none; }
 }
 
 @media (max-width: 768px) {
+  html {
+    scroll-padding-top: 80px;
+  }
+
   /* ── 1. Hide Desktop-only Elements ── */
   .insight-aura { display: none; }
   .scroll-progress { display: none; }
@@ -1804,23 +1808,22 @@ ul { list-style: none; }
   .nav-links { display: none; }
   .nav-menu-btn { display: none; }
 
-  /* ── 3. Bottom Tab Bar (replaces hamburger) ── */
+  /* ── 3. Mobile Tab Bar (moved to top) ── */
   .mobile-nav {
     display: flex !important;
     position: fixed;
-    bottom: 0;
+    top: 0;
     left: 0;
     width: 100%;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    padding: 8px 4px;
-    padding-bottom: calc(8px + env(safe-area-inset-bottom));
+    padding: calc(8px + env(safe-area-inset-top, 0px)) 4px 8px 4px;
     background: rgba(255, 255, 255, 0.82);
     backdrop-filter: blur(24px) saturate(180%);
     -webkit-backdrop-filter: blur(24px) saturate(180%);
-    border-top: 1px solid rgba(255, 255, 255, 0.6);
-    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
     z-index: 1001;
     gap: 0;
     border-radius: 0;
@@ -1851,7 +1854,7 @@ ul { list-style: none; }
   .mobile-nav-link.active::after {
     content: '';
     position: absolute;
-    top: -2px;
+    bottom: -2px; /* moved indicator to bottom of tab since nav is at top */
     left: 50%;
     transform: translateX(-50%);
     width: 20px;
@@ -2000,9 +2003,9 @@ ul { list-style: none; }
     margin-bottom: 40px;
   }
 
-  /* ── 7. Resume FAB — Smaller + Clear Bottom Tab Bar ── */
+  /* ── 7. Resume FAB — Smaller ── */
   .resume-fab {
-    bottom: 72px; /* sit above the bottom tab bar */
+    bottom: 24px;
     right: 16px;
     padding: 10px 18px;
     font-size: 12px;
@@ -2102,15 +2105,19 @@ ul { list-style: none; }
 
   /* Contact Spline Mobile Fix */
   .contact-spline-area {
-    height: 350px;
-    margin: 20px auto 0 auto;
+    height: 320px;
+    margin: 10px auto 0 auto;
     width: 100vw;
-    overflow: hidden;
+    position: relative;
+    overflow: visible;
   }
   .contact-spline-area spline-viewer {
-    width: 100vw !important;
+    position: absolute;
+    width: 160vw !important;
     height: 100% !important;
-    transform: scale(0.7);
+    left: -30vw;
+    top: 0;
+    transform: scale(0.6); /* scales 160vw down to ~96vw */
     transform-origin: center center;
   }
   .contact-text-area {
@@ -2132,9 +2139,9 @@ ul { list-style: none; }
     gap: 20px;
   }
 
-  /* ── Footer with padding for bottom tab bar ── */
+  /* ── Footer ── */
   .site-footer {
-    padding-bottom: 80px !important;
+    padding-bottom: 24px !important;
   }
 
   /* ── Skills zones ── */
