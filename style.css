@@ -1501,6 +1501,23 @@ ul { list-style: none; }
   align-items: center;
 }
 
+/* Profile Photo */
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 30px rgba(59, 130, 246, 0.15), 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 28px rgba(59, 130, 246, 0.18), 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
 .about-grid {
   display: flex;
   flex-direction: column;
@@ -1776,37 +1793,249 @@ ul { list-style: none; }
 }
 
 @media (max-width: 768px) {
+  /* ── 1. Hide Desktop-only Elements ── */
   .insight-aura { display: none; }
-  .scroll-progress { right: 12px; }
-  
+  .scroll-progress { display: none; }
+
+  /* ── 2. Top Nav — Hidden on Mobile ── */
   .glass-nav {
-    max-width: calc(100% - 32px);
-    border-radius: var(--radius-lg);
+    display: none;
   }
-  
   .nav-links { display: none; }
-  .nav-menu-btn { display: flex; }
-  
-  .section-container { padding: 80px 20px; }
-  
+  .nav-menu-btn { display: none; }
+
+  /* ── 3. Bottom Tab Bar (replaces hamburger) ── */
+  .mobile-nav {
+    display: flex !important;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 4px;
+    padding-bottom: calc(8px + env(safe-area-inset-bottom));
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.06);
+    z-index: 1001;
+    gap: 0;
+    border-radius: 0;
+  }
+  .mobile-nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 6px 4px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--text-tertiary);
+    border-radius: 8px;
+    transition: color var(--transition-fast);
+    flex: 1;
+    text-align: center;
+  }
+  .mobile-nav-link:hover,
+  .mobile-nav-link.active {
+    color: var(--accent-blue);
+    background: rgba(59, 130, 246, 0.08);
+  }
+  .mobile-nav-link.active {
+    position: relative;
+  }
+  .mobile-nav-link.active::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 3px;
+    border-radius: 3px;
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-indigo));
+  }
+  /* Tab bar icons via pseudo-elements */
+  .mobile-nav-link::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 1px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.5;
+    transition: opacity var(--transition-fast);
+  }
+  .mobile-nav-link:hover::before,
+  .mobile-nav-link.active::before {
+    opacity: 1;
+  }
+  /* Individual tab icons (inline SVG as data URIs) */
+  .mobile-nav-link[data-section="hero"]::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%233b82f6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='m2.25 12 8.954-8.955a1.126 1.126 0 0 1 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25'/%3E%3C/svg%3E");
+  }
+  .mobile-nav-link[data-section="experience"]::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%233b82f6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0'/%3E%3C/svg%3E");
+  }
+  .mobile-nav-link[data-section="projects"]::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%233b82f6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25a2.25 2.25 0 0 1-2.25-2.25v-2.25Z'/%3E%3C/svg%3E");
+  }
+  .mobile-nav-link[data-section="skills"]::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%233b82f6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5'/%3E%3C/svg%3E");
+  }
+  .mobile-nav-link[data-section="about"]::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%233b82f6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z'/%3E%3C/svg%3E");
+  }
+  .mobile-nav-link[data-section="contact"]::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%233b82f6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75'/%3E%3C/svg%3E");
+  }
+
+  /* ── 4. Mobile Typography Refinements ── */
+  .section-title {
+    font-size: clamp(24px, 6vw, 32px);
+  }
+  .section-tag {
+    font-size: 11px;
+    padding: 5px 12px;
+  }
+  .hero-dark .hero-title {
+    font-size: clamp(32px, 8vw, 40px);
+  }
+  .hero-dark .hero-subtitle {
+    font-size: 12px;
+  }
+  .hero-dark .hero-value-prop {
+    font-size: 15px;
+    line-height: 1.55;
+    margin-bottom: 28px;
+  }
+  .exp-title {
+    font-size: 18px;
+  }
+  .exp-role {
+    font-size: 11px;
+  }
+  .exp-brief p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .bento-title {
+    font-size: 16px;
+  }
+  .bento-primary .bento-title {
+    font-size: 18px;
+  }
+  .bento-brief {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+  .stat-number {
+    font-size: 24px;
+  }
+  .stat-suffix {
+    font-size: 18px;
+  }
+  .about-card-title {
+    font-size: 20px;
+  }
+  .teaser-text {
+    font-size: 14px;
+  }
+  .extra-content p {
+    font-size: 14px;
+  }
+  .subsection-title {
+    font-size: 20px;
+  }
+  .pub-content h4 {
+    font-size: 13px;
+  }
+  .pub-intro {
+    font-size: 12px;
+  }
+  .contact-intro {
+    font-size: 15px;
+    margin-bottom: 14px;
+  }
+  .contact-interact-hint {
+    font-size: 13px;
+  }
+
+  /* ── 5. Balanced Section Spacing ── */
+  .section-header {
+    margin-bottom: 48px;
+  }
+  .section-container {
+    padding: 48px 18px;
+  }
+  .section-subtitle {
+    margin-bottom: 28px !important;
+    font-size: 14px !important;
+  }
+  .certs-container {
+    margin-bottom: 40px;
+  }
+  .experience-timeline {
+    gap: 24px;
+  }
+
+  /* ── 6. Shorter Bento Card Images ── */
+  .bento-image {
+    height: 150px;
+  }
+  .bento-primary .bento-image {
+    height: 180px;
+  }
+  .bento-content {
+    padding: 18px;
+  }
+  .bento-grid {
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  /* ── 7. Resume FAB — Smaller + Clear Bottom Tab Bar ── */
+  .resume-fab {
+    bottom: 72px; /* sit above the bottom tab bar */
+    right: 16px;
+    padding: 10px 18px;
+    font-size: 12px;
+    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.3);
+  }
+  .resume-fab svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  /* ── Layout Fixes ── */
   .hero-container { padding: 0 24px; }
   .hero-cta-group { flex-direction: column; align-items: center; }
-  
+  .cta-button {
+    padding: 12px 28px;
+    font-size: 14px;
+  }
+
   .detail-grid { grid-template-columns: 1fr; }
-  
+
   .bento-grid { grid-template-columns: 1fr; }
   .bento-primary { grid-column: 1; }
-  
+
   .cert-grid { grid-template-columns: 1fr 1fr; }
-  
+
   .contact-grid { grid-template-columns: 1fr; max-width: 400px; }
-  
+
   .exp-card { flex-direction: column; }
-  .timeline-connector { 
-    flex-direction: row; 
-    padding: 20px 20px 0 20px;
+  .timeline-connector {
+    flex-direction: row;
+    padding: 16px 18px 0 18px;
   }
-  .timeline-line { 
+  .timeline-line {
     height: 2px;
     width: auto;
     flex: 1;
@@ -1814,20 +2043,123 @@ ul { list-style: none; }
     margin-left: 8px;
     background: linear-gradient(90deg, var(--accent-blue), transparent);
   }
-  .exp-content { padding: 16px 20px 20px; }
+  .exp-content { padding: 14px 18px 18px; }
+  .exp-header {
+    gap: 12px;
+  }
+  .exp-icon {
+    width: 38px;
+    height: 38px;
+  }
+  .exp-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+  .exp-badges {
+    margin-left: 0;
+    margin-top: 8px;
+  }
+  .exp-header {
+    flex-wrap: wrap;
+  }
 
   .modal-card {
     width: 95%;
     padding: 24px;
     max-height: 90vh;
   }
+
+  /* Publications Mobile Carousel */
+  .publications-grid {
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 16px;
+    gap: 16px;
+  }
+  .publications-grid::-webkit-scrollbar {
+    display: none;
+  }
+  .publications-grid {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .publication-card {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 18px;
+  }
+  .publication-card:hover {
+    transform: translateY(-4px);
+  }
+  .pub-link-icon {
+    align-self: flex-end;
+    margin-top: -36px;
+  }
+
+  /* Contact Spline Mobile Fix */
+  .contact-spline-area {
+    height: 350px;
+    margin: 20px auto 0 auto;
+    width: 100vw;
+    overflow: hidden;
+  }
+  .contact-spline-area spline-viewer {
+    width: 100vw !important;
+    height: 100% !important;
+    transform: scale(0.7);
+    transform-origin: center center;
+  }
+  .contact-text-area {
+    padding: 60px 24px 20px;
+  }
+
+  /* ── About Section ── */
+  .about-section {
+    padding: 60px 16px;
+  }
+  .about-card-img {
+    height: 150px !important;
+    margin: -32px -32px 18px -32px !important;
+  }
+  .inline-glass-card {
+    padding: 24px;
+  }
+  .about-grid {
+    gap: 20px;
+  }
+
+  /* ── Footer with padding for bottom tab bar ── */
+  .site-footer {
+    padding-bottom: 80px !important;
+  }
+
+  /* ── Skills zones ── */
+  .skills-zones {
+    gap: 24px;
+  }
+  .zone-title {
+    font-size: 16px;
+  }
+  .skill-chip {
+    padding: 6px 14px;
+  }
+  .skill-chip span {
+    font-size: 12px;
+  }
+  .chip-label {
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 480px) {
   .cert-grid { grid-template-columns: 1fr; }
-  .hero-dark .hero-title { font-size: 36px; }
+  .hero-dark .hero-title { font-size: 30px; }
   .resume-fab span { display: none; }
-  .resume-fab { padding: 14px; border-radius: 50%; }
+  .resume-fab { padding: 12px; border-radius: 50%; }
 }
 
 /* ── Project Image Parallax ── */
